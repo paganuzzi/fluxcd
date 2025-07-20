@@ -4,7 +4,7 @@ metadata:
   name: netbird
   namespace: flux-system
 spec:
-  interval: 10m
+  interval: 30s
   targetNamespace: netbird-system
   prune: true
   sourceRef:
