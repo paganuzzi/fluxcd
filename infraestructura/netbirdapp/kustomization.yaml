@@ -10,5 +10,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: netbird-repo
-  path: ./infraestructura/netbirdapp/
+  path: ./app/netbirdapp/
   timeout: 1m
