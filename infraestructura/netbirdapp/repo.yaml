@@ -7,5 +7,5 @@ metadata:
 spec:
   interval: 5m
   ref:
-    branch: infra
+    branch: main
   url: https://github.com/paganuzzi/fluxcd.git
