@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: netbirdapp
-  replicas: 1
+  replicas: 10
   strategy:
     rollingUpdate:
       maxSurge: 25%
