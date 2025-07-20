@@ -32,5 +32,3 @@ spec:
             - containerPort: 80
               name: http
       restartPolicy: Always
----
-
