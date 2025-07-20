@@ -1,9 +1,8 @@
 resources:
   - namespace.yaml
-  - ingres.yaml
   - deployment.yaml
   - service.yaml
-
+  - ingres.yaml
 namespace: netbird-system
 namePrefix: netbird-
 commonLabels:

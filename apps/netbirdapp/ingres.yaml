@@ -9,5 +9,5 @@ spec:
     - match: Host(`netbirdapp.k3d`)
       kind: Rule
       services:
-        - name: netbird-nerbirdapp
+        - name: netbird-netbirdapp
           port: 80
