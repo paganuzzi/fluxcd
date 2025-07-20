@@ -31,8 +31,8 @@ spec:
             periodSeconds: 10
           readinessProbe:
             httpGet:
-              path: /healthzz
-              port: 81
+              path: /healthz
+              port: 80
             initialDelaySeconds: 5
             timeoutSeconds: 2
             successThreshold: 1
