@@ -5,7 +5,7 @@ metadata:
 spec:
   http:
     - backends:
-        - serviceName: netbirdapp
+        - serviceName: netbird-netbirdapp
           servicePort: 80
       match:
         hosts:
