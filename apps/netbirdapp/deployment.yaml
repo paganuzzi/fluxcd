@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment
+spec:
+  selector:
+    matchLabels:
+      app: netbirdapp
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: netbirdapp
+    spec:
+      containers:
+        - name: netbirdapp
+          image: traefik/whoami
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              cpu: 10m
+              memory: 10Mi
+            limits:
+              cpu: 11m
+              memory: 11Mi
+          ports:
+            - containerPort: 80
+              name: http
+      restartPolicy: Always
+---
+

@@ -1,0 +1,9 @@
+resources:
+  - deployment.yaml
+
+  - service.yaml
+
+namespace: netbird-system
+namePrefix: netbird-
+commonLabels:
+  app: netbird-app
