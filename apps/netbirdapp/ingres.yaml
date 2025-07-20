@@ -1,13 +1,23 @@
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
+apiVersion: apisix.apache.org/v2
+kind: ApisixRoute
 metadata:
   name: route
 spec:
-  entryPoints:
-    - web
-  routes:
-    - match: Host(`netbirdapp.k3d`)
-      kind: Rule
-      services:
-        - name: netbird-netbirdapp
-          port: 80
+  http:
+    - backends:
+        - serviceName: netbirdapp
+          servicePort: 80
+      match:
+        hosts:
+          - netbird.k3d
+        methods:
+          - GET
+        paths:
+          - /*
+      name: method
+      plugins:
+        - name: prometheus
+          enable: true
+          config:
+            disable: false
+            prefer_name: true
